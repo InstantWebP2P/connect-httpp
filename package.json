@@ -1,0 +1,23 @@
+{
+  "author": "Tom Zhou <iwebpp@gmail.com>",
+  "name": "connect-httpp",
+  "description": "Connect middleware to set httpp capacity flag in res.headers.alternate-protocol",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/InstantWebP2P/connect-httpp.git"
+  },
+  "keywords": [
+    "httpp",
+    "connect",
+    "udp",
+    "httpp-forward"
+  ],
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "main": "index",
+  "bin": {},
+  "dependencies": {
+  }
+}
