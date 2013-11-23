@@ -10,6 +10,18 @@ Connect middleware to set httpp capacity flag in res.headers.alternate-protocol
   var httpp = require('connect-httpp');
   
   app.use(httpp(80)); // fill httpp server port, then httpp:80 will set in res.headers.alternate-protocol
+  // mount application
+  app.use(businessLogic);
+  
+  // start both http and httpp server
+  var srvHttp = require('http').createServer(app);
+  var srvHttpp = require('httpp').createServer(app);
+
+   srvHttp.listen(80); // listen on tcp 80
+   srvHttpp.listen(80); // listen on udp 80
+   
+  // then, both tcp:80 and udp:80 will serve application.
+  // once httpp-forward local proxy run on browser side, web traffic will transfer over httpp/udp.
 
 ### connect-httpp is for work with httpp-forward: https://github.com/InstantWebP2P/httpp-forward
 
