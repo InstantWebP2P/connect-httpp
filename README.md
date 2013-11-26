@@ -25,8 +25,7 @@ Connect middleware to set httpp capacity flag in res.headers.alternate-protocol
     
     5. then, both tcp:80 and udp:80 will serve application.
     
-    6. connect-httpp is for work with httpp-forward: https://github.com/InstantWebP2P/httpp-forward 
-       please run httpp-forward proxy on browser side.
+### connect-httpp is for work with httpp-forward, please run httpp-forward proxy on browser side: https://github.com/InstantWebP2P/httpp-forward 
 
 
 <br/>
