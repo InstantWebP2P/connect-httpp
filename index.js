@@ -1,4 +1,5 @@
-
+// Copyright (c) 2012-2013 Tom Zhou<iwebpp@gmail.com>
+//
 // Connect httpp middleware to set httpp capacity in res.headers
 exports = module.exports = function(port) {
     var althttpp = /httpp:[0-9]+/gi;
