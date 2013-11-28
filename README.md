@@ -8,7 +8,7 @@ Connect middleware to set httpp capacity flag in res.headers.alternate-protocol
 
     1. create connect app
     var connect = require('connect');
-    var app = connect();
+    var app = connect(), app1 = connect();
     var httpp = require('connect-httpp');
 
     2. mount connect-httpp middleware
@@ -16,10 +16,11 @@ Connect middleware to set httpp capacity flag in res.headers.alternate-protocol
 
     3. mount application
     app.use(businessLogic);
+    app1.use(businessLogic);
     
     4. start both http and httpp server
     var srvHttp = require('http').createServer(app);
-    var srvHttpp = require('httpp').createServer(app);
+    var srvHttpp = require('httpp').createServer(app1);
     srvHttp.listen(80); // listen on tcp 80
     srvHttpp.listen(80); // listen on udp 80
     
